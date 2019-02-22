@@ -1,5 +1,7 @@
 # Feedback
 
+This is the Feedback System for St. Thomas' College of Engineering and Technology.
+This is just the Frontend system, the backend will be uploaded soon.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
 
 ## Development server
