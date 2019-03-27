@@ -1,0 +1,28 @@
+
+<div class="card" >
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Select Optional Subjects</mat-card-title>
+      <mat-card-subtitle>Note 1 :- Compulsory subjects are already selected for you. Just select <strong>YOUR</strong> optional subjects. <br> <br> Note 2 :- Those who do not have optional subjects can simply start. </mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <form *ngIf="fg" [formGroup]="fg">
+        <mat-list >
+          <mat-list-item *ngFor="let subtech of subject_teacher">
+
+            <mat-checkbox formControlName="{{subtech?.subject_code+subtech?.teacher}}">{{subtech?.subject_code}} -
+              {{subtech?.teacher}}</mat-checkbox>
+             
+
+          </mat-list-item>
+        </mat-list>
+      </form>
+      <mat-card-actions>
+        <button mat-raised-button  style="float:right;" (click)="startFeedback()" id="sbtn" >Start</button>
+      </mat-card-actions>
+    </mat-card-content>
+
+
+  </mat-card>
+</div>

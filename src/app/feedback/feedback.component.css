@@ -1,0 +1,30 @@
+mat-card {
+  margin-top: 10px;
+  margin-left: 30px;
+  width: 80%;
+}
+
+.selected {
+  background-color: #dedede;
+}
+.left {
+  position: relative;
+  float: left;
+  width: 20%;
+  height: 100%;
+  background-color: #ffffff;
+}
+.right {
+  position: relative;
+  float: right;
+  width: 80%;
+  height: 100%;
+}
+.heading {
+  height: 50px;
+  color: #ffffff;
+  background: #3f51b5;
+  padding-top: 15px;
+  padding-left: 10px;
+  font-size: 80%;
+}

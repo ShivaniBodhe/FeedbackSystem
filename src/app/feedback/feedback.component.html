@@ -1,0 +1,43 @@
+<div class="left">
+  <div class="heading mat-elevation-z4">
+    <h2 class="mat-h1">Faculty</h2>
+  </div>
+
+  <mat-list>
+    <mat-list-item *ngFor="let subTech of subjectTeacher" [class.selected]="subTech===currTS">{{subTech.teacher}} -
+      {{subTech.subject_code}}
+      <mat-divider></mat-divider>
+    </mat-list-item>
+
+  </mat-list>
+  <footer>NB: <strong>DO NOT PRESS BACK BUTTON.</strong> Otherwise you will have to start again.</footer>
+</div>
+
+
+<div class="right">
+  <div class="heading mat-elevation-z4">
+    <h2 class="mat-h1"> Submit Your Feedback</h2>
+  </div>
+
+  <mat-card>
+    <mat-card-content>
+      <mat-card-title class="mat-h2">Teacher: {{currTS?.teacher}},
+        Subject: {{currTS?.subject_code}}</mat-card-title>
+      <mat-divider></mat-divider>
+      <mat-horizontal-stepper [linear]="false" #stepper>
+        <mat-step *ngFor="let category of categoryQuestion" label="{{category?.cat_name}}" [stepControl]="category?.formGroup"
+          [editable]="true">
+          <form *ngIf="category?.formGroup" [formGroup]="category?.formGroup">
+            <mat-list>
+              <mat-list-item *ngFor="let question of category?.questions">
+                <span style="width:70%;">{{question?.q_text}}</span>
+                <mat-radio-group *ngIf="category?.formGroup.get(''+question?.q_id)" style="position:relative;float:right;"
+                  [formControl]="category?.formGroup.get(''+question?.q_id)" required>
+                  <mat-radio-button *ngFor="let i of [5,4,3,2,1]" [value]="i" style="margin-right:10px">{{i}}</mat-radio-button>
+                </mat-radio-group>
+              </mat-list-item>
+
+            </mat-list>
+            <button mat-raised-button color="primary" [disabled]="isInvalid(category)" (click)="goNextStepper()" style="float:right">Submit</button> </form> </mat-step> </mat-horizontal-stepper> </mat-card-content> </mat-card>
+                </div>
+                

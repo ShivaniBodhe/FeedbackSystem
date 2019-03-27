@@ -1,0 +1,12 @@
+.card {
+  position: relative;
+  width: 30%;
+
+  margin-top: 10px;
+  left: 35%;
+  margin-bottom: 30px;
+}
+
+mat-card-content {
+  padding-bottom: 20px;
+}

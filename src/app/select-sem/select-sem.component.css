@@ -1,0 +1,22 @@
+.card {
+  position: absolute;
+
+  top: 20%;
+  left: 38%;
+}
+mat-form-field {
+  width: 100%;
+}
+.semsel {
+  width: 100%;
+  font-size: 20px;
+}
+mat-card-content {
+  padding: 20px;
+}
+.row {
+  width: 100%;
+}
+.mat-radio-button{
+  margin-right: 16px;
+}
